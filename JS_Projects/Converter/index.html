@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    
+
+
+      <div class="converter-container">
+        <div class="input">
+          <span>Convert what quantity?</span> :
+          <input type="number" id="inputValues" />
+        </div>
+
+        <div id="from-to" class="from-to">
+          <div class="p1"><p>From</p></div>
+          <div class="from">
+            <select id="from">
+              <option value="°C">Celcius</option>
+              <option value="°F">Fahrenheit</option>
+              <option value="°R">Rankine</option>
+              <option value="°Ré">Reaumur</option>
+              <option value="K">kelvin</option>
+            </select>
+          </div>
+          <div class="switch-button">
+            <button id="button" type="button" onclick="switchPlaces()">
+              <i class="fas fa-exchange-alt"></i>
+            </button>
+          </div>
+          <div class="p2"><p>To</p></div>
+          <div class="to">
+            <select id="to">
+              <option value="°C">Celcius</option>
+              <option value="°F">Fahrenheit</option>
+              <option value="°R">Rankine</option>
+              <option value="°Ré">Reaumur</option>
+              <option value="K">kelvin</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="button">
+          <input
+            type="button"
+            id="convert-button"
+            onclick="temperatureCoverter()"
+            value="Convert"
+          />
+        </div>
+
+        <div class="output"><p id="outputValues"></p></div>
+      </div>
+
+      
+    </div>
+    <script src="javascript.js"></script>
+    <script src="all.min.js"></script>
+  </body>
+</html>

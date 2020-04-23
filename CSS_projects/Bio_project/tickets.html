@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!----------------- bootstrap-------- -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+    <!-- ----------font awesome--------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- -------style.css------------------- -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- --------script----------- -->
+    <script src="./css/app.js"></script>
+    <!-- --------------------------- -->
+  
+    <title>Biljetter.page</title>
+  </head>
+  <!-- ------------body----------------- -->
+<body>
+  <!-- -----------navbar--------------- -->
+   <div class="topnav" id="myTopnav">
+    <h1>BIO</h1>
+    <a href="home.html">Hem</a>
+    <a href="movies.html">Filmer</a>
+    <a href="tickets.html">Biljetter</a>
+    <a href="member.html">Medlem</a>
+    <a href="news.html">Nyheter</a>
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+<a href="#" id="search"><i class="fa fa-search" id="searchicon"></i>
+</div></a>
+
+    <!-- --------------main------------- -->
+    <div class="container-fluid tickets-content">
+
+          <!-- --------carusel-------- -->
+          <div class="innernews">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+              <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+              </ul>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./images/five.jpeg" width="800" height="300">
+                  <img src="./images/eight.jpeg" width="800" height="300">
+                  <img src="./images/five.jpeg" width="800" height="300">
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/eight.jpeg" width="800" height="300">
+                  <img src="./images/nine.jpeg" width="800" height="300">
+                  <img src="./images/five.jpeg" width="800" height="300">
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/nine.jpeg" width="800" height="300">
+                  <img src="./images/eight.jpeg" width="800" height="300">
+                  <img src="./images/five.jpeg" width="800" height="300">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+          </div>
+          <!-- --------buttons-------- -->
+          <div class="dropdown1">
+            <button onclick="drop1Function()" class="dropbtn1">Stad</button>
+            <div id="myDropdown1" class="dropdown-content1">
+              <a href="#">Stockholm</a>
+              <a href="#">Göteborg</a>
+              <a href="#">Malmö</a>
+              <a href="#">Uppsala</a>
+            </div>
+          </div>
+  
+          <div class="dropdown2">
+            <button onclick="drop2Function()" class="dropbtn2"> Datum Idag</button>
+            <div id="myDropdown2" class="dropdown-content2">
+              <a href="#">Datum imorgon</a>
+              <a href="#">Datum</a>
+              <a href="#">Datum</a>
+            </div>
+          </div>
+
+          <div class="dropdown3">
+            <button onclick="drop3Function()" class="dropbtn3">Biografer</button>
+            <div id="myDropdown3" class="dropdown-content3">
+              <a href="#">Mall of Scandinavia</a>
+              <a href="#">Heron City</a>
+              <a href="#">Hörnstull</a>
+            </div>
+          </div>
+          <div class="dropdown4">
+            <button onclick="drop4Function()" class="dropbtn4">Alla Filmer</button>
+            <div id="myDropdown4" class="dropdown-content4">
+              <a href="#">Film 1</a>
+              <a href="#">Film 2</a>
+              <a href="#">Film 3</a>
+            </div>
+          </div>
+      </div>
+    <!-- ---------------footer--------------- -->
+      <div class="footernav" id="footernav">
+        <a href="home.html">Hem</a>
+        <a href="movies.html">Filmer</a>
+        <a href="tickets.html">Biljetter</a>
+        <a href="member.html">Medlem</a>
+        <a href="news.html">Nyheter</a>
+      </div>
+     <!-- --------copyright----------- -->
+        <div class="row bottom">
+          <div class="col-sm-6 copy">
+            <p>Copyright &copy; 2019</p>
+          </div>
+          <div class="col-sm-6 icons">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----burger function--------- -->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+
+    </script>
+    <!-- ----------drop down function 1------------ -->
+    
+    <script>
+      /* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+      function drop1Function() {
+        document.getElementById("myDropdown1").classList.toggle("show1");
+      }
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn1')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content1");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show1')) {
+              openDropdown.classList.remove('show1');
+            }
+          }
+        }
+      }
+      /*--------drop down function 2------*/
+
+      function drop2Function() {
+        document.getElementById("myDropdown2").classList.toggle("show2");
+      }
+
+
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn2')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content2");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show2')) {
+              openDropdown.classList.remove('show2');
+            }
+          }
+        }
+      }
+      /*---------drop downfunction3------*/
+
+      function drop3Function() {
+        document.getElementById("myDropdown3").classList.toggle("show3");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn3')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content3");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show3')) {
+              openDropdown.classList.remove('show3');
+            }
+          }
+        }
+      }
+      /*---------drop down function 4-------------*/
+
+      function drop4Function() {
+        document.getElementById("myDropdown4").classList.toggle("show4");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn4')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content4");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show4')) {
+              openDropdown.classList.remove('show4');
+            }
+          }
+        }
+      }
+    </script>
+    <!-- ------------bootstrap---------------- -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

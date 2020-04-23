@@ -1,0 +1,78 @@
+NOTE: ALL ts files and folders must be in the src folder otherwise it won't work.
+And the index.html must be in the src folder too and inside i must include the index.ts file that will do all the exports to the dist folder.
+
+1) Install Parcel: 
+
+npm i -g parcel-bundler
+ or
+npm i parcel-bundler
+---------------------------------------------
+2) Create a package.json:
+
+npm init -y (automatically created)
+or
+npm init (manually created)
+---------------------------------------------
+Parcel can take any type of file as an entry point, but an HTML or JavaScript file is a good place to start. If you link your main JavaScript file in the HTML using a relative path, Parcel will also process it for you, and replace the reference with a URL to the output file.
+
+3) Next, create an index.html and index.js file:
+
+<html>
+<body>
+  <script src="./index.ts"></script>
+</body>
+</html>
+---------------------------------------------
+NB: Parcel converts JS assets to ES5, which won't run in in the context of a <script type="module"> tag, so just use plain <script> tags with no type attribute in your source HTML.
+
+4) In the terminal point your entry file:
+
+parcel index.html
+
+or If you do have your own server, you can run Parcel in watch mode instead:
+
+parcel watch index.html
+
+---------------------------------------------
+Multiple entry files
+
+In case you have more than one entry file, let's say index.html and about.html, you have 2 ways to run the bundler:
+
+In the terminal specifying the file names:
+
+parcel index.html about.html
+
+or Use tokens and create a glob:
+
+parcel *.html
+
+-----------------------------------------
+/////////////////////////////////////////
+-----------------------------------------
+
+Adding parcel to your project LOCALY
+
+1) install in the terminal:
+npm install --save-dev parcel-bundler 
+or
+npm i -D parcel-bundler 
+
+---------------------------------------------
+2) Then, add these tasks scripts to your project, by modifying your package.json:
+
+{
+  "scripts": {
+    "dev": "parcel <your entry file>",
+    "build": "parcel build <your entry file>"
+  }
+}
+---------------------------------------------
+3) Then, you will be able to run it:
+
+# To run in development mode:
+
+npm run dev
+
+# To run in production mode:
+
+npm run build

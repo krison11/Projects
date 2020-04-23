@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: rgb(9, 7, 17);
+}
+
+/* header & footer*/
+.header,
+.footer {
+  height: 11vh;
+  width: 100vw;
+  background: rgb(175, 0, 53);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header {
+  font-size: 30px;
+  letter-spacing: 4px;
+  position: relative;
+  top: -100vh;
+  animation: header 2s forwards ease-out;
+}
+.footer {
+  align-self: flex-end;
+  position: relative;
+  bottom: -100vh;
+  animation: footer 2s forwards ease-out;
+}
+@keyframes header {
+  to {
+    position: relative;
+    top: 0vh;
+  }
+}
+@keyframes footer {
+  to {
+    position: relative;
+    bottom: 0vh;
+  }
+}
+/* end of header & footer */
+
+/* header title */
+.hello {
+  position: relative;
+  left: -100vw;
+  animation: showCriminal 0.6s 3s forwards ease-out;
+}
+.world {
+  position: relative;
+  right: -100vw;
+  animation: showProfile 0.6s 3s forwards ease-out;
+}
+
+@keyframes showCriminal {
+  to {
+    position: relative;
+    left: 0vw;
+  }
+}
+@keyframes showProfile {
+  to {
+    position: relative;
+    right: 0vw;
+  }
+}
+/* end of header title */
+
+/* icons */
+.footer a {
+  position: relative;
+  left: -100vw;
+  font-size: 35px;
+}
+.github {
+  animation: movingIcons 0.6s 4s forwards ease-out,
+    rotatingIcons 1.5s 6s infinite linear;
+}
+.linkedin {
+  animation: movingIcons 0.6s 4.3s forwards ease-out,
+    rotatingIcons 1.5s 6s infinite linear;
+}
+.instagram {
+  animation: movingIcons 0.6s 4.6s forwards ease-out,
+    rotatingIcons 1.5s 6s infinite linear;
+}
+.facebook {
+  animation: movingIcons 0.6s 4.9s forwards ease-out,
+    rotatingIcons 1.5s 6s infinite linear;
+}
+
+@keyframes movingIcons {
+  to {
+    left: 0vw;
+  }
+}
+@keyframes rotatingIcons {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/* end of icons */
+/* container */
+
+.container {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* end of container */
+
+/* paragraphs */
+.paragraphs {
+  max-width: 500px;
+  text-align: center;
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.p1 {
+  font-size: 50px;
+  margin: 10px;
+  color: rgb(175, 0, 53);
+  position: relative;
+  right: -100vw;
+  animation: showProfile 1s 9s forwards ease-out;
+}
+.p2 {
+  font-size: 40px;
+  margin: 5px;
+  position: relative;
+  right: -100vw;
+  animation: showProfile 1s 9.2s forwards ease-out;
+}
+.p3 {
+  font-size: 40px;
+  margin: 5px;
+  position: relative;
+  right: -100vw;
+  animation: showProfile 1s 9.6s forwards ease-out;
+}
+
+/* end of paragraphs */
+
+/* image */
+
+.image-div {
+  height: 0;
+  max-width: 500px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  animation: a 2s 6.5s forwards ease, b 2s 8.5s forwards ease;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes a {
+  from {
+    height: initial;
+    transform: scale(0.005, 0.005);
+  }
+  to {
+    height: initial;
+    transform: scale(1, 0.005);
+  }
+}
+@keyframes b {
+  from {
+    height: initial;
+    transform: scale(1, 0.005);
+  }
+  to {
+    height: initial;
+    transform: scale(1, 1);
+  }
+}
+/* end of image */
+
+@media screen and (max-width: 1073px) {
+  .header,
+  .footer {
+    height: 9.5vh;
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+
+  .footer a {
+    font-size: 30px;
+  }
+
+  .container {
+    width: 100vw;
+    flex-wrap: wrap;
+  }
+
+  .image-div {
+    max-width: 400px;
+  }
+
+  .p1 {
+    font-size: 45px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .p2,
+  .p3 {
+    margin: 0;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header,
+  .footer {
+    height: 9vh;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .footer a {
+    font-size: 28px;
+  }
+
+  .container {
+    width: 100vw;
+    flex-wrap: wrap;
+  }
+
+  .image-div {
+    max-width: 350px;
+  }
+
+  .p1 {
+    font-size: 35px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .p2,
+  .p3 {
+    margin: 0;
+    font-size: 30px;
+  }
+}

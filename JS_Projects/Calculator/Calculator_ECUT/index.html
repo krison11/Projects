@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <!-- input text -->
+    <input type="text" id="query" />
+    <input type="button" name="one" value="1" onclick="query.value += '1'" />
+    <input type="button" name="two" value="2" onclick="query.value += '2'" />
+    <input type="button" name="three" value="3" onclick="query.value += '3'" />
+
+    <input type="button" name="four" value="4" onclick="query.value += '4'" />
+
+    <input type="button" name="five" value="5" onclick="query.value += '5'" />
+
+    <input type="button" name="six" value="6" onclick="query.value += '6'" />
+    <input type="button" name="seven" value="7" onclick="query.value += '7'" />
+
+    <input type="button" name="eight" value="8" onclick="query.value += '8'" />
+
+    <input type="button" name="nine" value="9" onclick="query.value += '9'" />
+
+    <input type="button" name="plus" value="+" onclick="query.value += ' + '" />
+
+    <input
+      type="button"
+      name="minus"
+      value="-"
+      onclick="query.value += ' - '"
+    />
+
+    <input
+      type="button"
+      name="times"
+      value="x"
+      onclick="query.value += ' * '"
+    />
+
+    <input type="button" name="div" value="/" onclick="query.value += ' / '" />
+
+    <!-- anropa JS funktionen-->
+    <input type="button" value="=" onclick="calc()" />
+
+    <!-- Två olika clear-->
+
+    <input
+      type="button"
+      name="clear"
+      value="clear"
+      onclick="query.value = ''"
+    />
+
+    <input
+      type="button"
+      name="clear"
+      value="clear result"
+      onclick="result.value = ''"
+    />
+
+    <!-- inpresultat text -->
+    <input type="text" id="result" />
+  </body>
+</html>

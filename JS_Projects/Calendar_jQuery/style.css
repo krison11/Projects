@@ -1,0 +1,42 @@
+#myDiv3 {
+  height: 450px;
+  width: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border-radius: 3px;
+  margin: 10px auto;
+  background: #3c84bf;
+  color: white;
+  box-shadow: 7px 7px 7px rgb(42, 50, 53);
+}
+
+.items {
+  font-size: 25px;
+}
+
+.year {
+  grid-area: 1/1/2/2;
+  justify-self: flex-start;
+  margin: 20px;
+}
+.week {
+  grid-area: 1/2/2/3;
+  justify-self: flex-end;
+  margin: 20px;
+}
+.day {
+  grid-area: 2/1/3/-1;
+}
+.date {
+  grid-area: 3/1/4/-1;
+  font-size: 150px;
+}
+.month {
+  grid-area: 4/1/5/-1;
+}
+.nameday {
+  grid-area: 5/1/6/-1;
+}

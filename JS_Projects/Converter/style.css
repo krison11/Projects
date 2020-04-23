@@ -1,0 +1,113 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  font-size: 20px;
+}
+
+/* ----outer div that contains everything---- */
+.converter-container {
+  height: 350px;
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  color: whitesmoke;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(rgb(104, 110, 148), rgb(27, 30, 45));
+  border-radius: 4px;
+  box-shadow: 10px 10px 10px rgb(26, 25, 25);
+}
+/* ----all the divs within---- */
+.converter-container div {
+  margin: 25px;
+}
+/* ----user input---- */
+#inputValues {
+  width: 100px;
+  border-radius: 2px;
+}
+/* ----contains two divs---- */
+.from-to {
+  display: grid;
+  grid-template-rows: 30px 50px;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-areas: 'one . three' 'four five six';
+  position: relative;
+}
+#from {
+  color: red;
+}
+#to {
+  color: green;
+}
+
+.from-to div {
+  margin: 0;
+}
+
+.p1 {
+  grid-area: one;
+  align-self: flex-end;
+}
+.p2 {
+  grid-area: three;
+  align-self: flex-end;
+}
+.from {
+  grid-area: four;
+  align-self: flex-start;
+}
+.switch-button {
+  grid-area: five;
+}
+.to {
+  grid-area: six;
+}
+
+.switch .from {
+  grid-area: six;
+}
+.switch .to {
+  grid-area: four;
+}
+
+/* ----arrow---- */
+button {
+  border-radius: 5px;
+  border: none;
+  background: none;
+  color: rgb(84, 179, 252);
+  font-size: 25px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+button :hover {
+  color: aqua;
+}
+
+/* ----button---- */
+.button input {
+  border: none;
+  font-size: 20px;
+  width: 150px;
+  padding: 10px;
+  background: linear-gradient(rgb(31, 188, 255), rgb(16, 101, 249));
+  border-radius: 3px;
+  color: whitesmoke;
+  transition: all 1s ease;
+}
+.button input:hover {
+  transform: scale(1.1);
+  background: linear-gradient(rgb(106, 203, 255), rgb(1, 102, 255));
+  cursor: pointer;
+}
+/* ----output---- */
+.output {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}

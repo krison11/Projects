@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!----------------- bootstrap-------- -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+  <!-- ----------font awesome--------------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- -------style.css------------------- -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- --------script----------- -->
+  <script src="./css/app.js"></script>
+  <!-- --------------------------- -->
+  <title>Member.page</title>
+</head>
+<!-- ------------body----------------- -->
+
+<body>
+  <!-- -----------navbar--------------- -->
+  <div class="topnav" id="myTopnav">
+    <h1>BIO</h1>
+    <a href="home.html">Hem</a>
+    <a href="movies.html">Filmer</a>
+    <a href="tickets.html">Biljetter</a>
+    <a href="member.html">Medlem</a>
+    <a href="news.html">Nyheter</a>
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    <a href="#" id="search"><i class="fa fa-search" id="searchicon"></i>
+  </div></a>
+
+  <!-- --------------main------------- -->
+  <div class="container-fluid member-content">
+   <div class="img">
+      <img src="./images/vip.jpg" width="80%" alt="">
+   </div>
+
+<!-- ------------signup---------------- -->
+    <div class="buttons">
+      <div class="dropdown5">
+        <button onclick="drop5Function()" class="dropbtn5">Bli medlem</button>
+        <div id="myDropdown5" class="dropdown-content5">
+          <form>
+            First name <br>
+            <input type="text" name="firstname" value="">
+            <br>
+            Last name <br>
+            <input type="text" name="lastname" value="">
+            <br>
+            Enter email<br>
+            <input type="email" email="email" value="">
+            <br>
+            Enter password<br>
+            <input type="password" password="password" value="">
+            <br>
+            Verify pasword <br>
+            <input type="password" password="password" value="">
+            <br><br>
+            <input type="submit" value="Register" class="input-button">
+          </form>
+        </div>
+      </div>
+      <!-- ------login------------- -->
+      <div class="dropdown6">
+        <button onclick="drop6Function()" class="dropbtn6">Logga in</button>
+        <div id="myDropdown6" class="dropdown-content6">
+          <form>
+            Enter email<br>
+            <input type="email" email="email" value="">
+            <br>
+            Enter password<br>
+            <input type="password" password="password" value="">
+            <br><br>
+            <input type="submit" value="Logga in" class="input-button">
+          </form>
+        </div>
+      </div>
+    </div>
+        </div>
+        
+<!-- ---------------footer--------------- -->
+  <div class="footernav" id="footernav">
+    <a href="home.html">Hem</a>
+    <a href="movies.html">Filmer</a>
+    <a href="tickets.html">Biljetter</a>
+    <a href="member.html">Medlem</a>
+    <a href="news.html">Nyheter</a>
+  </div>
+   <!-- --------copyright----------- -->
+  <div class="row bottom">
+    <div class="col-sm-6 copy">
+      <p>Copyright &copy; 2019</p>
+    </div>
+    <div class="col-sm-6 icons">
+      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <!-- ---------burger function-------- -->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <!-- ----------signup function----------------- -->
+  <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function drop5Function() {
+      document.getElementById("myDropdown5").classList.toggle("show5");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn5')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content5");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show5')) {
+            openDropdown.classList.remove('show5');
+          }
+        }
+      }
+    }
+    /*---------------login function--------------------*/
+    function drop6Function() {
+      document.getElementById("myDropdown6").classList.toggle("show6");
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn6')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content6");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show6')) {
+            openDropdown.classList.remove('show6');
+          }
+        }
+      }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style css -->
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <!-- main.ts -->
+    <script src="main.ts" defer></script>
+
+    <!-- font awesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+      defer
+    ></script>
+    <title>web Shop</title>
+  </head>
+  <body>
+    <!-- nav -->
+    <div class="nav">
+      <span class="menu-bar"><i class="fas fa-bars"></i></span>
+      <span class="logo"
+        ><img src="./images/logo.png" alt="logo" width=" 80px"
+      /></span>
+      <div class="shopping-cart-div">
+        <span class="shopping-cart"
+          ><i class="fas fa-cart-arrow-down"></i
+        ></span>
+        <span class="label"></span>
+      </div>
+      <!-- slected items -->
+      <div class="shopping-bag">
+        <div class="empty-cart">The basket is empty</div>
+        <div class="payment">
+          <div class="total-amount">
+            Total:<span class="total-price"> </span> kr
+          </div>
+
+          <div class="pay-btn">Pay</div>
+        </div>
+      </div>
+    </div>
+    <!-- banner image slider-->
+    <div class="slider-container">
+      <video id="video-big-screen" autoplay loop muted>
+        <source src="./videos/video1.mov" type="video/mov" />
+        <source src="./videos/video2.mp4" type="video/mp4" />
+        <source src="./videos/video3.webm" type="video/webm" />
+      </video>
+
+      <video id="video-small-screen" autoplay loop muted>
+        <source src="./videos/small-vid1.mov" type="video/mov" />
+        <source src="./videos/small-vid2.mp4" type="video/mp4" />
+        <source src="./videos/small-vid3.webm" type="video/webm" />
+      </video>
+    </div>
+
+    <!-- container -->
+    <div class="product-container"></div>
+
+    <!-- footer -->
+    <div class="footer">
+      <span class="copyright"><i>Copyright &copy; 2020</i> </span>
+      <span class="github"><i class="fab fa-github"></i> </span>
+    </div>
+  </body>
+</html>

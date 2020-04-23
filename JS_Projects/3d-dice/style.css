@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(
+    ellipse at center,
+    #52b152 10%,
+    #008a00 30%,
+    #005700 70%,
+    #002400 100%
+  );
+}
+
+#btn {
+  padding: 5px 10px 5px 10px;
+  font-size: large;
+  position: absolute;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  bottom: 5vh;
+  left: 47vw;
+}
+#newID {
+  position: absolute;
+  left: -100vw;
+  top: 30vh;
+  animation: rolling 0.5s forwards linear, rolling2 0.2s 0.5s forwards linear,
+    rolling3 0s 0.7s forwards linear;
+}
+
+@keyframes rolling {
+  from {
+    left: -100vw;
+    top: 30vh;
+  }
+  to {
+    left: 80vw;
+    top: 25vh;
+    transform: rotate(1440deg);
+  }
+}
+@keyframes rolling2 {
+  from {
+    left: 80vw;
+    top: 25vh;
+  }
+  to {
+    left: 37vw;
+    top: 10vh;
+    transform: rotate(360deg);
+  }
+}
+@keyframes rolling3 {
+  from {
+    left: 37vw;
+    top: 10vh;
+  }
+  to {
+    left: 37vw;
+    top: 25vh;
+  }
+}

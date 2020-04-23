@@ -1,0 +1,126 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 10px;
+}
+
+body {
+  display: flex;
+  background: #036700;
+}
+#button {
+  font-size: 30px;
+  padding: 7px;
+  width: 130px;
+  color: #f7f7f7;
+  letter-spacing: 2px;
+  background: #f0002c;
+  transition: 0.3s linear;
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  bottom: 10vh;
+  left: 45vw;
+  border-radius: 50px;
+  box-shadow: 2px 2px 10px rgba(21, 19, 31, 0.919);
+}
+
+#button:hover {
+  box-shadow: 7px 7px 10px rgba(21, 19, 31, 0.824);
+  transform: scale(1.05);
+}
+
+.dice > div {
+  height: 20px;
+  width: 20px;
+  background: rgb(255, 255, 255);
+}
+
+/* all dices be off screen */
+
+.dice {
+  display: grid;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  background: #d30101;
+  visibility: hidden;
+  position: absolute;
+  top: 30vh;
+  left: 67vw;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(23, 23, 28, 0.789);
+}
+.empty {
+  visibility: hidden;
+}
+
+.dice4 {
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: ".." "..";
+}
+
+.dice5 {
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "..." "..." "...";
+}
+
+.dice6 {
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: ".." ".." "..";
+}
+
+/* only the roll dice must be visible */
+#rollingDice {
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  position: absolute;
+  top: 30vh;
+  left: -100vw;
+  border-radius: 20px;
+  font-size: 40px;
+  box-shadow: none;
+}
+
+/* --- animations called from javascript ---- */
+@keyframes roll {
+  to {
+    position: absolute;
+    top: 30vh;
+    left: 67vw;
+    transform: rotate(1440deg);
+  }
+}
+
+@keyframes visible {
+  to {
+    visibility: visible;
+  }
+}
+
+/* after show this message */
+
+#message {
+  font-size: 1px;
+  visibility: hidden;
+  color: #ffffff;
+  position: absolute;
+  top: 40vh;
+  left: 48vw;
+  text-shadow: 1px 1px 10px rgba(19, 19, 19, 0.419);
+}
+
+@keyframes transform {
+  to {
+    visibility: visible;
+    transform: scale(100);
+  }
+}

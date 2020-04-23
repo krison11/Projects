@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Open+Sans&display=swap');
+
+// imports
+@import './resets';
+
+// flex center
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// nav and footer style
+@mixin nav_and_footer {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  font-size: larger;
+  color: rgb(41, 41, 41);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 7px 1px rgb(196, 196, 196);
+  padding: 0px 40px 0px 40px;
+  z-index: 1;
+}
+
+// icon hover
+@mixin icon_hover {
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+// button style
+@mixin btn_style {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 15px 0px 15px 0px;
+  border-radius: 35px;
+  transition: 0.3s linear;
+  font-size: larger;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(70, 70, 70);
+  }
+}
+
+/*** nav ****/
+
+.nav {
+  @include nav_and_footer;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+
+  .shopping-cart-div {
+    position: relative;
+    transition: 0.3s linear;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    @include icon_hover;
+
+    .label {
+      position: absolute;
+      bottom: 21px;
+      left: 23px;
+      background: rgb(255, 0, 76);
+      color: white;
+      font-size: small;
+      padding: 0px 4px 0px 4px;
+      border-radius: 25px 25px 25px 0px;
+    }
+  }
+
+  .fa-bars {
+    @extend .shopping-cart-div;
+  }
+}
+
+/* slider video */
+
+@mixin screen_style {
+  padding: 50px;
+  width: 100%;
+  margin: auto;
+}
+#video-big-screen {
+  @include screen_style;
+}
+#video-small-screen {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  #video-small-screen {
+    display: block;
+    @include screen_style;
+  }
+  #video-big-screen {
+    display: none;
+  }
+}
+
+/* end of slider video */
+
+.shopping-bag {
+  max-height: 75vh;
+  width: 0px;
+  position: absolute;
+  top: 71px;
+  right: 0px;
+  background-color: rgb(255, 254, 254);
+  transition: 0.3s linear;
+  border-radius: 3px;
+  box-shadow: 0px 0px 7px 1px rgb(183, 191, 198);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+
+  .empty-cart {
+    max-width: 500px;
+    min-width: 250px;
+    text-align: center;
+    font-size: x-large;
+    margin: 50px 0px 50px 0px;
+  }
+
+  .payment {
+    order: 1000;
+    margin: 50px 0px 50px 0px;
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    .total-amount {
+      border: 1px solid rgb(164, 164, 164);
+      text-align: center;
+      font-size: 18px;
+      border: none;
+      border-top: 1.5px solid rgb(109, 109, 109);
+      border-bottom: 1.5px solid rgb(109, 109, 109);
+      padding: 13px 0px 13px 0px;
+      width: 250px;
+    }
+    .pay-btn {
+      width: 250px;
+      @include btn_style;
+    }
+  }
+}
+
+.show-bag {
+  width: 500px;
+}
+
+.selected-div {
+  width: 440px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+
+  .selected-img {
+    width: 70px;
+  }
+
+  .selected-price {
+    width: 70px;
+    text-align: center;
+  }
+  .selected-quantity {
+    width: 40px;
+    text-align: center;
+  }
+  .plus,
+  .minus,
+  .remove {
+    border: 1px solid rgb(182, 182, 182);
+    padding: 0px 3px 0px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      border: 1px solid black;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .show-bag,
+  .empty-cart,
+  .selected-div {
+    max-width: 100vw;
+  }
+}
+/*** end of nav ****/
+
+/* product container */
+
+.product-container {
+  padding: 2vw;
+  min-height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  justify-content: center;
+}
+/* end of product container */
+
+/*  product */
+
+.product {
+  margin: 0px 5px 50px 5px;
+  cursor: pointer;
+
+  .product-text {
+    font-size: large;
+    color: rgb(46, 46, 46);
+    background-color: white;
+    padding: 10px 20px 15px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .text-model {
+      margin-right: 70px;
+    }
+  }
+
+  .product-img {
+    width: 100%;
+    margin: auto;
+    border-radius: 3px;
+  }
+}
+/* end of  product */
+
+/*********** modal *************/
+.modal {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vh 0vw 5vh 0vw;
+  background-color: white;
+  display: none;
+}
+
+.image-container {
+  flex: 1 0 70vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+
+  & img,
+  & video {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.content-container {
+  flex: 1 0 30vw;
+  height: 100vh;
+}
+
+.x-btn {
+  position: absolute;
+  top: 13vh;
+  right: 6vh;
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(104, 104, 104);
+}
+
+.modal-text-container {
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  font-size: large;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .modal-model {
+    margin-right: 100px;
+  }
+}
+
+.size-container {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  & div {
+    padding: 15px;
+    border: 1px solid rgb(187, 187, 187);
+    @include flex_center;
+    cursor: pointer;
+
+    &:hover {
+      border-color: black;
+    }
+  }
+}
+
+.add-btn {
+  @include flex_center;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 300px;
+  @include btn_style;
+}
+
+.inactive {
+  background-color: rgb(70, 70, 70);
+  & {
+    cursor: initial;
+  }
+}
+/*********** end of modal *************/
+
+/* footer */
+.footer {
+  @include nav_and_footer;
+  justify-content: center;
+
+  .fa-github {
+    margin-left: 20px;
+    font-size: 30px;
+    transition: 0.3s linear;
+    @include icon_hover;
+  }
+}
+
+/* enf of footer */

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: 'Roboto';
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f9f6f6;
+}
+
+/* -------- header ---------- */
+header {
+  width: 100vw;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffa200;
+  box-shadow: 0px 0px 15px rgb(133, 133, 133);
+  position: sticky;
+  top: 0vh;
+  z-index: 3;
+}
+
+.header-container {
+  height: 45px;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-container input {
+  padding: 5px 40px 5px 20px;
+  font-size: x-large;
+  border-radius: 25px;
+}
+.header-container .fa-plus-circle {
+  font-size: 38px;
+
+  position: absolute;
+  top: 3.4px;
+  left: 280px;
+  color: #5d4683;
+  transition: 0.3s ease;
+}
+.sort-btn {
+  position: absolute;
+  top: 3.4px;
+  left: 320px;
+  font-size: 20px;
+  padding: 7px;
+  border-radius: 20px;
+  background: #5d4683;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.fa-plus-circle:hover,
+.sort-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* -------- footer ---------- */
+footer {
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  color: rgb(238, 238, 238);
+  background-color: rgb(33, 33, 33);
+  position: sticky;
+  bottom: 0vh;
+  z-index: 3;
+  box-shadow: 0px 0px 15px rgb(133, 133, 133);
+}
+.fa-github {
+  font-size: xx-large;
+  margin-left: 50px;
+  transition: 0.3s ease;
+}
+.fa-github:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* -------- container ---------- */
+.container {
+  min-height: 76vh;
+  padding: 50px;
+}
+
+/* ------- elements created from JS ------ */
+
+/*  div  */
+.list-container {
+  width: 500px;
+  margin: 15px auto;
+  text-align: center;
+  position: relative;
+  background-color: rgb(221, 221, 221);
+  padding-bottom: 10px;
+  border-radius: 5px;
+  height: 50px;
+  overflow: hidden;
+  box-shadow: 0px 5px 7px rgb(150, 149, 149);
+  transition: 0.3s ease;
+}
+
+.list-container:hover {
+  box-shadow: 0px 7px 10px rgb(150, 149, 149);
+}
+.list-container input {
+  padding: 5px 40px 5px 20px;
+  font-size: large;
+  border-radius: 25px;
+  position: relative;
+  top: 10px;
+  margin-bottom: 20px;
+}
+.list-container .fa-plus-circle {
+  font-size: 33px;
+  position: absolute;
+  top: 59px;
+  left: 345px;
+  color: #5d4683;
+  transition: 0.3s ease;
+}
+.list-sort-btn {
+  font-size: 17px;
+  padding: 6px;
+  position: absolute;
+  top: 60px;
+  left: 382px;
+  background: #5d4683;
+  color: white;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+h1 {
+  height: 50px;
+  text-align: center;
+
+  background-color: rgb(255, 184, 54);
+  color: rgb(63, 62, 62);
+  border-radius: 2px;
+  position: relative;
+  padding: 5px;
+  box-shadow: 0px 5px 10px rgb(189, 189, 189);
+}
+h1:hover {
+  background-color: rgb(255, 201, 101);
+}
+
+.fa-check-circle,
+.fa-trash-alt {
+  height: 100%;
+  padding: 0px 5px 0px 5px;
+  font-size: xx-large;
+  position: absolute;
+  top: 2px;
+  background: none;
+  transition: 0.3s ease;
+}
+
+.fa-trash-alt {
+  color: rgb(255, 0, 89);
+  right: 60px;
+}
+
+.fa-check-circle {
+  color: rgb(57, 187, 37);
+  right: 20px;
+}
+
+.fa-trash-alt:hover,
+.fa-check-circle:hover,
+.list-sort-btn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+p {
+  width: 100%;
+  list-style: none;
+  position: relative;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.fa-angle-double-down {
+  position: absolute;
+  left: 30px;
+  top: 12px;
+  font-size: 30px;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: rgb(63, 62, 62);
+}
+
+.fa-angle-double-down:hover {
+  transform: scale(1.1);
+}
+
+/* tpggle class-div */
+.container .class-div-long {
+  height: inherit;
+}
+/* tpggle class-div */
+.container .class-div-short {
+  height: 50px;
+}
+
+/* toggle  text-style*/
+.text-style {
+  text-decoration: line-through;
+  color: rgb(128, 128, 128);
+}
+/* toggle check btn */
+.btn-color * {
+  color: rgb(128, 128, 128);
+}
+
+/* toggle none */
+.none {
+  display: none;
+}
+
+.fade {
+  text-decoration: line-through;
+  color: rgb(128, 128, 128);
+  background-color: rgb(196, 196, 196);
+}
+
+.fade:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+
+/*# sourceMappingURL=/main.af46ece4.css.map */
